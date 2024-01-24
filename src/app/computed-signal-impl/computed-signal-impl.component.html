@@ -1,0 +1,29 @@
+<nav>
+  <button routerLink="..">
+    Back
+  </button>
+</nav>
+<br>
+<br>
+<br>
+
+
+<div>
+  Signal counter
+  <br>
+  {{ counter() }}
+</div>
+
+<div>
+  Signal counter multiplied 2 times
+  <br>
+  {{ doubleCount() }}
+</div>
+<div>
+  <button (click)="incerement()">Increment</button>
+  <button (click)="decerement()">Decrement</button>
+  <br>
+  <br>
+  <button (click)="clicked = !clicked">init effect on counter change</button>
+  <button (click)="stopEffect()">On click i will manually clean up effect</button>
+</div>

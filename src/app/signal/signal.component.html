@@ -1,0 +1,56 @@
+<nav>
+<button [routerLink]="['computed-example-impl']">Navigate to Computed signal example implementation</button>
+</nav>
+
+<br>
+<br>
+
+
+<h1>
+  Simple signal:
+</h1>
+
+<p>{{exampleSignal()}}</p>
+
+<button (click)="setValue()">Set value</button>
+<button (click)="updateValue('updated')">update value</button>
+
+
+<h1>
+  Signal store example:
+</h1>
+<div *ngFor="let item of signalStoreService.items() ; let i = index ">
+ {{i + 1}}.{{item.name}}, {{item.description}}
+</div>
+
+<br>
+<button (click)="addItem()">Add item</button>
+
+<br>
+<h1>Obs handled with signal</h1>
+{{dataHandledWithSignal()}}
+<br>
+
+
+<br>
+<h1>Obs handled with Async pipe</h1>
+{{dataWithAsyncPipe | async }}
+
+<br>
+<br>
+
+
+
+
+<br>
+<div>
+  <h1>Computed signal</h1>
+
+  {{exampleComputedSignalSource()}}
+  <br>
+  {{computedSignalResult()}}
+
+<!--  {{errorRaisingComputedSignal()}}-->
+
+
+</div>
